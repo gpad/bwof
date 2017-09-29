@@ -1,36 +1,40 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
-
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+<div class="row command">
+  <div class="col-lg-2">
   </div>
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+  <div class="col-lg-8">
+      <form method="post" action="<%= execution_path(@conn, :create) %>">
+          <div><input type="hidden" name="_csrf_token" value="<%= Plug.CSRFProtection.get_csrf_token() %>" /></div>
+
+          <div class="form-group">
+              <label for="count">Process to add</label>
+              <input type="number" class="form-control" name="count" value="100" min="1" max="100000">
+          </div>
+
+
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="crash">
+              Crash!!!
+            </label>
+          </div>
+
+          <div><input type="submit" class="btn btn-primary btn-block" name="submit" value="Go!!!"></div>
+      </form>
+  </div>
+
+  <div class="col-lg-2">
+  </div>
+</div>
+
+<div class="row status">
+  <div class="col-lg-2">
+  </div>
+
+  <div class="col-lg-8">
+      <p class="lead">Number of process: <%= @number_of_process %></p>
+  </div>
+
+  <div class="col-lg-2">
   </div>
 </div>
