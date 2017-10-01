@@ -2,7 +2,7 @@
 
 Example program for [Beam way of life](https://www.slideshare.net/gpadovani/beam-way-of-life-80337975) that was presented [here](http://www.italian-elixir.org/).
 
-The examples can be found in [docs/keynote](https://github.com/gpad/bwof/docs/keynote).
+The examples can be found in [docs/keynote](https://github.com/gpad/bwof/tree/master/docs/keynote).
 
 # Application
 
