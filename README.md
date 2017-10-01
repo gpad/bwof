@@ -1,6 +1,12 @@
-# Bwof
+# BEAM way of life
 
-To start your Phoenix server:
+Example program for [Beam way of life](https://www.slideshare.net/gpadovani/beam-way-of-life-80337975) that was presented [here](http://www.italian-elixir.org/).
+
+The examples can be found in [docs/keynote](https://github.com/gpad/bwof/docs/keynote).
+
+# Application
+
+To start your this application:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
@@ -9,7 +15,11 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+You can execute this to run it as release in production:
+
+```shell
+$ MIX_ENV=prod mix release --env=prod && cd _build/prod/rel/bwof && ./bin/bwof console
+```
 
 ## Learn more
 
